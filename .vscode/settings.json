@@ -1,0 +1,8 @@
+{
+  "workbench.colorCustomizations": {
+    // 상단 바
+    "titleBar.activeBackground": "#F7A7BB",
+    // 상단 타이틀 글자색
+    "titleBar.activeForeground": "#000000"
+  }
+}
