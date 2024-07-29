@@ -8,4 +8,8 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.GOOGLE_OAUTH_SECRET || "",
     }),
   ],
+
+  pages: {
+    signIn: "/api/auth/signin",
+  },
 };

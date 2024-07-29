@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans as sans } from "next/font/google";
 import "./globals.css";
 import AuthContext from "@/context/AuthContext";
+import Footer from "./components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,9 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body className={inter.className}>
-        <AuthContext>{children}</AuthContext>
+    <html lang="ko" className={inter.className}>
+      <body className="flex flex-col w-full">
+        <AuthContext>
+          <main className="grow w-full mx-auto">{children}</main>
+        </AuthContext>
+        <Footer />
       </body>
     </html>
   );
