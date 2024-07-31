@@ -20,9 +20,10 @@ export default async function SigninPage({
   searchParams: { callbackUrl },
 }: SigninPage) {
   const session = await getServerSession(authOptions);
+  console.log(session);
 
   if (session) {
-    redirect("/");
+    redirect("/chat");
   }
 
   const providers = (await getProviders()) ?? {};

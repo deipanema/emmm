@@ -7,6 +7,7 @@ import small from "../../../public/images/login-sm.png";
 import google from "../../../public/images/googleicon.png";
 import { ClientSafeProvider, signIn } from "next-auth/react";
 import { Roboto } from "next/font/google";
+import Footer from "./Footer";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["500"] });
 
@@ -17,7 +18,7 @@ type Signin = {
 
 export default function Signin({ providers, callbackUrl }: Signin) {
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full bg-white grow mx-auto">
       <picture className="flex flex-col items-center py-2">
         <Image
           src={large}
@@ -60,6 +61,7 @@ export default function Signin({ providers, callbackUrl }: Signin) {
           </button>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
