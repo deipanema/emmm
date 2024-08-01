@@ -7,3 +7,13 @@ body {
   height: 100vh;
   overflow-y: auto;
 }
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  @apply bg-light-gray;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-light-gray rounded-full;
+}

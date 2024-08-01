@@ -12,11 +12,9 @@ export default async function ChatLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="grid lg:grid-cols-[300px_1fr] h-screen max-h-full">
-      <nav className="bg-white">
-        <Sidebar />
-      </nav>
-      <section className="bg-light-gray">{children}</section>
-    </div>
+    <main className="grid lg:grid-cols-[400px_1fr] h-screen max-h-full">
+      <Sidebar />
+      {children}
+    </main>
   );
 }

@@ -10,7 +10,8 @@ const config: Config = {
     colors: {
       black: "#000000",
       "dark-gray": "#707177",
-      "light-gray": "#f3f4f6",
+      "light-gray": "#efefef",
+      background: "#fafafa",
       white: "#FFFFFF",
       pink: "#f7a7bb",
       "black-54": "rgba(0, 0, 0, 0.54)",
