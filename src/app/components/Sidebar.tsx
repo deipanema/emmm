@@ -35,11 +35,8 @@ export default function Sidebar() {
         <BrandIcon />
         <ul className="">
           {menu.map((icon) => (
-            <Link href={icon.href}>
-              <li
-                key={icon.href}
-                className="p-4 rounded-lg transition-all hover:bg-light-gray cursor-pointer"
-              >
+            <Link key={icon.href} href={icon.href}>
+              <li className="p-4 rounded-lg transition-all hover:bg-light-gray cursor-pointer">
                 {pathName === icon.href ? icon.clickedIcon : icon.icon}
               </li>
             </Link>
